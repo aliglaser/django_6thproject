@@ -1,5 +1,13 @@
 {% extends "layout.html" %}
 
+
 {% block content %}
-	<h1>MINERAL CATALOG</h1>
+<div class="bounds">
+	{{ block.super }}
+	<h1 class="text-centered">MINERAL CATALOG</h1>
+	<article>
+		<p class="text-centered">Welcome to Nuri's Mineral Catalog Website.</p>
+		<p class="text-centered">Click <a href="{% url 'minerals:mineral_list' %}">&ltMineral Catalog&gt</a> to see the list of the minerals</p>
+	</article>
+</div>
 {% endblock %}
