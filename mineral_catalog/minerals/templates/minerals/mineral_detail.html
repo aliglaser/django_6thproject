@@ -17,31 +17,31 @@
 				<tbody>
 					<tr>
 						<td class="mineral__category">Category</td>
-						<td>{{ mineral.category }}</td>		
+						<td>{{ mineral.category|title }}</td>		
 					</tr>
 					<tr>
 						<td class="mineral__category">Formula</td>
-						<td class="mineral__formula">{{ mineral.formula|markdown_to_html|safe }}</td>		
+						<td class="mineral__formula">{{ mineral.formula|markdown_to_html|safe|title }}</td>		
 					</tr>
 					<tr>
 						<td class="mineral__category">Strunz Classification</td>
-						<td>{{ mineral.strunz_classification }}</td>		
+						<td>{{ mineral.strunz_classification|title }}</td>		
 					</tr>
 					<tr>
 						<td class="mineral__category">Unit Cell</td>
-						<td>{{ mineral.unit_cell }}</td>		
+						<td>{{ mineral.unit_cell|title }}</td>		
 					</tr>
 					<tr>
 						<td class="mineral__category">Color</td>
-						<td>{{ mineral.color }}</td>		
+						<td>{{ mineral.color|title }}</td>		
 					</tr>
 					<tr>
 						<td class="mineral__category">Crystal Habit</td>
-						<td>{{ mineral.crystal_habit }}</td>		
+						<td>{{ mineral.crystal_habit|title }}</td>		
 					</tr>
 					<tr>
 						<td class="mineral__category">Mohs Scale Hardness</td>
-						<td>{{ mineral.mohs_scale_hardness }}</td>		
+						<td>{{ mineral.mohs_scale_hardness|title }}</td>		
 					</tr>
 				</tbody>
 			</table>
