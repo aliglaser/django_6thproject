@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% load mineral_extras %}
+
+{% load static %}
+
+{% block content %}
+<div class="bounds bounds--small">
+	{{ block.super }}
+	<div class="grid-100 mineral__container">
+		<h1 class="mineral__name">{{ mineral.name }}</h1>
+		<div class="mineral__image-bg">
+			<img class="mineral__image" src="{% static "" %}img/{{mineral.name}}.jpg">
+			<p class="mineral__caption">{{ mineral.image_caption }}</p>	
+		</div>
+		<div class="mineral__table-container">
+			<table class="mineral__table">
+				<tbody>
+					<tr>
+						<td class="mineral__category">Category</td>
+						<td>{{ mineral.category }}</td>		
+					</tr>
+					<tr>
+						<td class="mineral__category">Formula</td>
+						<td class="mineral__formula">{{ mineral.formula|markdown_to_html|safe }}</td>		
+					</tr>
+					<tr>
+						<td class="mineral__category">Strunz Classification</td>
+						<td>{{ mineral.strunz_classification }}</td>		
+					</tr>
+					<tr>
+						<td class="mineral__category">Unit Cell</td>
+						<td>{{ mineral.unit_cell }}</td>		
+					</tr>
+					<tr>
+						<td class="mineral__category">Color</td>
+						<td>{{ mineral.color }}</td>		
+					</tr>
+					<tr>
+						<td class="mineral__category">Crystal Habit</td>
+						<td>{{ mineral.crystal_habit }}</td>		
+					</tr>
+					<tr>
+						<td class="mineral__category">Mohs Scale Hardness</td>
+						<td>{{ mineral.mohs_scale_hardness }}</td>		
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>	
+{% endblock %}
